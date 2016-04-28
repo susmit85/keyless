@@ -61,8 +61,7 @@ while True:
       btsocket.close()
     time.sleep(sleepTime)
   except bluetooth.btcommon.BluetoothError as e:
-#    syslog.syslog("Device away", e
-    #lock_door()
+#terrible way to check error, but e.errno didn't work
     if lastState == "connected" and "112" in str(e):
       syslog.syslog("Locking...")
       lock_door(lock, unlock_init, unlock, light)
