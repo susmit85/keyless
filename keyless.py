@@ -43,6 +43,7 @@ sleepTime = 2
 #light - pin 4 ground
 #lock - pin 9 ground
 
+#Pairing is necessary for mac address spoofing
 #sudo service bluetooth restart
 #sudo hciconfig
 #sudo hciconfig hci0 piscan
