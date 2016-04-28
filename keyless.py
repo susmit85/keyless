@@ -52,7 +52,7 @@ while True:
   try:
     btsocket=bluetooth.BluetoothSocket(bluetooth.L2CAP)
     btsocket.connect((target_address, 3))
-    if btsocket.send("hey") and lastState == "away":
+    if btsocket.send("init") and lastState == "away":
       syslog.syslog("device found %s" %(target_address))
       syslog.syslog("Unlocking car...")
       unlock_door(lock,unlock_init, unlock, light)
